@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Credit Scoring Model (Synthetic, End-to-End)
 
 This project builds a creditworthiness classifier using synthetic financial data.
@@ -15,3 +16,7 @@ This project builds a creditworthiness classifier using synthetic financial data
 pip install -r requirements.txt  # sklearn, pandas, matplotlib, joblib, numpy
 python run_inference.py
 ```
+=======
+# CodeAlpha_CreditScoringModel
+Credit scoring ML project  for CodeAlpha  internship
+>>>>>>> 77ba6452ba80d5db5900e7f63b6fdc338c571f29
