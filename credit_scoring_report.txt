@@ -1,0 +1,20 @@
+CREDIT SCORING MODEL — EVALUATION SUMMARY
+
+             Model  Precision  Recall     F1  ROC_AUC
+LogisticRegression     0.6768  0.6437 0.6598   0.7661
+      RandomForest     0.6801  0.6013 0.6383   0.7604
+      DecisionTree     0.6348  0.6503 0.6425   0.7352
+
+Confusion Matrices:
+
+LogisticRegression:
+[[413 138]
+ [160 289]]
+
+DecisionTree:
+[[383 168]
+ [157 292]]
+
+RandomForest:
+[[424 127]
+ [179 270]]
