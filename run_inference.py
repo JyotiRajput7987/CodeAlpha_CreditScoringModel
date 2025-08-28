@@ -1,17 +1,18 @@
-import pandas as pd
 import joblib
+import numpy as np
 
-"
-            "df = pd.read_csv('credit_scoring_dataset.csv')
-"
-            "X = df.drop(columns=['creditworthy'])
-"
-            "rf = joblib.load('models/RandomForest.joblib')
-"
-            "pred = rf.predict(X.head(10))
-"
-            "proba = rf.predict_proba(X.head(10))[:,1]
-"
-            "print('Predictions:', pred)
-"
-            "print('Probabilities:', proba)
+# Load the trained model
+model = joblib.load("Credit_scoring_model.ipynb")
+
+# Example input data [income, debts, payment_history_score]
+# You can change values for demo
+sample_input = np.array([[50000, 10000, 0.9]])  # 0.9 means 90% good payment history
+
+# Predict
+prediction = model.predict(sample_input)
+prediction_proba = model.predict_proba(sample_input)
+
+# Show output
+print("Input Data: Income=50000, Debts=10000, Payment History=90%")
+print(f"Predicted Creditworthiness: {'Approved' if prediction[0]==1 else 'Rejected'}")
+print(f"Prediction Probability: {prediction_proba[0][1]*100:.2f}%")
